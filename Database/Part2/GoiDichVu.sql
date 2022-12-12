@@ -11,8 +11,7 @@ BEGIN
     DATEDIFF(DATE_ADD(hd.ngay_bat_dau, INTERVAL 12 MONTH), CURRENT_DATE()), 0) as so_ngay_con_lai
     FROM hoa_don_goi_dich_vu hd, goi_dich_vu gdv
     WHERE hd.ma_khach_hang = input_ma_khach_hang
-    AND hd.ten_goi = gdv.ten_goi
-    ;
+    AND hd.ten_goi = gdv.ten_goi;
 END$$
 
 DELIMITER ;
