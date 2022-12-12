@@ -135,7 +135,7 @@ CREATE TABLE IF NOT EXISTS hoa_don_goi_dich_vu (
     ten_goi 		VARCHAR(255),
     ngay_gio_mua 	DATETIME,
     ngay_bat_dau 	DATE,
-    tong_tien 		INT NOT NULL,
+    tong_tien 		INT NOT NULL DEFAULT 0,
 	FOREIGN KEY (ma_khach_hang) REFERENCES khach_hang(ma_khach_hang),
     FOREIGN KEY (ten_goi) REFERENCES goi_dich_vu(ten_goi),
     PRIMARY KEY (ma_khach_hang, ten_goi, ngay_gio_mua)
