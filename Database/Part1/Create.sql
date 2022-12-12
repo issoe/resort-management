@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS goi_dich_vu (
 );
 
 CREATE TABLE IF NOT EXISTS hoa_don_goi_dich_vu (
-	ma_khach_hang 	VARCHAR(255),
+	ma_khach_hang 	INT,
     ten_goi 		VARCHAR(255),
     ngay_gio_mua 	DATETIME,
     ngay_bat_dau 	DATE,
@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS don_dat_phong (
     ngay_tra_phong 	DATETIME,
     trinh_trang 	INT NOT NULL,
     tong_tien 		INT NOT NULL DEFAULT 0,
-    ma_khach_hang 	VARCHAR(255),
+    ma_khach_hang 	INT,
     ten_goi_dich_vu VARCHAR(255),
     CHECK (trinh_trang >= 1 AND trinh_trang <= 3),
     CHECK (ngay_nhan_phong > ngay_gio_dat AND ngay_tra_phong > ngay_nhan_phong),
