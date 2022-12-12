@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS cung_cap_vat_tu (
 );
 
 CREATE TABLE IF NOT EXISTS khach_hang (
-	ma_khach_hang 	VARCHAR(8) NOT NULL PRIMARY KEY,
+	ma_khach_hang 	INT NOT NULL PRIMARY KEY,
     cccd 			VARCHAR(12) NOT NULL UNIQUE,
     ho_ten 			VARCHAR(255),
     dien_thoai 		VARCHAR(15) NOT NULL UNIQUE, 
